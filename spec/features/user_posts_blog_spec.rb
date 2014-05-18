@@ -8,14 +8,16 @@ feature 'Post blog', %q{
 
   context 'as blog administrator' do
 
+    let(:post) { FactoryGirl.build(:post) }
+
     scenario 'User makes valid blog post' do
 
       pre_count = Post.count
       visit new_post_path
 
-      fill_in 'Title', with: 'hello'
-      fill_in 'Author', with: 'world'
-      fill_in 'Body', with: 'body'
+      fill_in 'Title', with: post.title
+      fill_in 'Author', with: post.author
+      fill_in 'Body', with: post.body
 
       click_on 'Post'
 
