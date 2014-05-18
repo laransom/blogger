@@ -11,7 +11,7 @@ feature 'Post blog', %q{
     scenario 'User makes valid blog post' do
 
       pre_count = Post.count
-      visit new_photo_path
+      visit new_post_path
 
       fill_in 'title', with: 'hello'
       fill_in 'author', with: 'world'
