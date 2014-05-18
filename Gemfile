@@ -38,6 +38,13 @@ group :development, :test do
   gem 'quiet_assets'
 end
 
+group :test do
+  gem 'capybara'
+  gem 'launchy'
+  gem 'shoulda'
+  gem 'factory_girl'
+end
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
