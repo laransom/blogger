@@ -45,6 +45,7 @@ end
 group :test do
   gem 'capybara'
   gem 'launchy'
+  gem 'valid_attribute'
   gem 'shoulda'
   gem 'factory_girl'
 end
