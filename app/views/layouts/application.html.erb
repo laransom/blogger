@@ -13,6 +13,9 @@
 
   <body>
 
+    <%= flash[:notice] %>
+    <%= flash[:alert] %>
+
     <%= yield %>
     <%= javascript_include_tag "application" %>
   </body>

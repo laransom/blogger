@@ -13,14 +13,14 @@ feature 'Post blog', %q{
       pre_count = Post.count
       visit new_post_path
 
-      fill_in 'title', with: 'hello'
-      fill_in 'author', with: 'world'
-      fill_in 'body', with: 'body'
+      fill_in 'Title', with: 'hello'
+      fill_in 'Author', with: 'world'
+      fill_in 'Body', with: 'body'
 
       click_on 'Post'
 
       expect(page).to have_content 'Post Added'
-      expect(Photo.count).to eq(pre_count + 1)
+      expect(Post.count).to eq(pre_count + 1)
 
     end
   end
