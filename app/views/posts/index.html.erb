@@ -1,0 +1,13 @@
+<h1>Blogger</h1>
+
+<%= link_to 'Add a Post', new_post_path %>
+
+<% if @posts.any? %>
+  <ul>
+    <% @posts.each do |post| %>
+      <li><%= link_to post.title, post_path(post) %></li>
+    <% end %>
+  </ul>
+<% else %>
+  <h4>No Posts</h4>
+<% end %>
