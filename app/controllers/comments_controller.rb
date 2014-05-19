@@ -19,7 +19,7 @@ class CommentsController < ApplicationController
       respond_to do |format|
         format.html do
           flash.now[:alert] = 'Comment Unsuccessful'
-          render post_path(@post)
+          render 'posts/show'
         end
 
         format.json do
