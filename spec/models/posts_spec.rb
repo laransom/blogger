@@ -11,4 +11,6 @@ describe Post do
   it { should have_valid(:body).when('Body') }
   it { should_not have_valid(:body).when(nil, '') }
 
+  it { should have_many(:comments) }
+
 end
