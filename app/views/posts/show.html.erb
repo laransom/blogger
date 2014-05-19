@@ -9,7 +9,7 @@
 <% end %>
 
 <div class='comment-feed'>
-  <% @post.comments.each do |post| %>
+  <% @post.comments.order(created_at: :desc).each do |post| %>
     <div class='comment'>
       <h4><%= post.author %></h4>
       <p><%= post.body %></p>
